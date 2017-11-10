@@ -64,15 +64,14 @@ https://devcenter.heroku.com/articles/heroku-cli<br>
 存檔
 ![image](https://github.com/maydayXi/herokuEnv/blob/master/saved.PNG)
    
-建立<runtime.txt>檔案
-    輸入 Python 的版本
-    python-3.6.2
+建立<runtime.txt>檔案 輸入 Python 的版本
+
+        python-3.6.2
     
 建立<prod_settings.py>檔
-
 進入專案子資料夾
-    cd GPMS
+        cd GPMS
       
 使用 Atom 或 subline 新增檔案輸入
-    from .settings import *
+        from .settings import *
         
