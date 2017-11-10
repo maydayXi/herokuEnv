@@ -55,5 +55,7 @@ https://devcenter.heroku.com/articles/heroku-cli<br>
       web: gunicorn --pythonpath GPMS GPMS.wsgi (GPMS 專案名稱 下的 "專案名稱.wsgi" 檔)
 
    ![image](https://github.com/maydayXi/herokuEnv/blob/master/Procfile.PNG)
+   
       存檔
+   
    ![image](https://github.com/maydayXi/herokuEnv/blob/master/saved.PNG)
