@@ -53,6 +53,7 @@ https://devcenter.heroku.com/articles/heroku-cli<br>
     建立<Procfile>檔
       使用 Atom 或 Sublime new 一個新檔輸入
       web: gunicorn --pythonpath GPMS GPMS.wsgi (GPMS 專案名稱 下的 "專案名稱.wsgi" 檔)
-      
+
+   ![image](https://github.com/maydayXi/herokuEnv/blob/master/Procfile.PNG)
       存檔
-      
+   ![image](https://github.com/maydayXi/herokuEnv/blob/master/saved.PNG)
