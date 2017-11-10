@@ -83,6 +83,9 @@ https://devcenter.heroku.com/articles/heroku-cli<br>
     ALLOWED_HOSTS = ['*']
     DEBUG = False
     
+存檔
+![image](https://github.com/maydayXi/herokuEnv/blob/master/prod_settings.PNG)
+
 建立<.gitignore>檔 (在專案根目錄下，非虛擬環境根目錄)
 輸入
     
