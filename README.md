@@ -41,4 +41,18 @@ https://devcenter.heroku.com/articles/heroku-cli<br>
       
 ## 五、部屬網站
     將專案資料夾複製到 heroku 虛擬環境資料夾中
+   ![image](https://github.com/maydayXi/herokuEnv/blob/master/herokuenv_dir.PNG)
     
+    建立 requirements.txt 檔案(讓 heroku 知道那些套件要安裝)
+      進入專案目錄
+      cd GPMS
+      
+      接著輸入
+      pip freeze > requirements.txt
+      
+    建立<Procfile>檔
+      使用 Atom 或 Sublime new 一個新檔輸入
+      web: gunicorn --pythonpath GPMS GPMS.wsgi (GPMS 專案名稱 下的 "專案名稱.wsgi" 檔)
+      
+      存檔
+      
