@@ -60,21 +60,19 @@ https://devcenter.heroku.com/articles/heroku-cli<br>
 建立<Procfile>檔
 使用 Atom 或 Sublime new 一個新檔輸入
       web: gunicorn --pythonpath GPMS GPMS.wsgi (GPMS 專案名稱 下的 "專案名稱.wsgi" 檔)
-
-   ![image](https://github.com/maydayXi/herokuEnv/blob/master/Procfile.PNG)
+![image](https://github.com/maydayXi/herokuEnv/blob/master/Procfile.PNG)
+存檔
+![image](https://github.com/maydayXi/herokuEnv/blob/master/saved.PNG)
    
-    存檔
-   
-   ![image](https://github.com/maydayXi/herokuEnv/blob/master/saved.PNG)
-   
-    建立<runtime.txt>檔案
-      輸入 Python 的版本
-      python-3.6.2
+建立<runtime.txt>檔案
+    輸入 Python 的版本
+    python-3.6.2
     
-    建立<prod_settings.py>檔
-      進入專案子資料夾
-      cd GPMS
+建立<prod_settings.py>檔
+
+進入專案子資料夾
+    cd GPMS
       
-      使用 Atom 或 subline 新增檔案輸入
-        from .settings import *
+使用 Atom 或 subline 新增檔案輸入
+    from .settings import *
         
