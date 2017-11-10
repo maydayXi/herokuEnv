@@ -1,11 +1,15 @@
 # herokuEnv
 
 ## 一、前情提要
-> 註冊一個 heroku 免費帳號
-<br/>安裝 Heroku CLI
-https://devcenter.heroku.com/articles/heroku-cli<br>
->安裝 Git
->https://git-scm.com/downloads
+註冊一個 heroku 免費帳號
+
+Create New App
+
+安裝 Heroku CLI
+https://devcenter.heroku.com/articles/heroku-cli
+
+安裝 Git
+https://git-scm.com/downloads
     
 ## 二、環境需求
 安裝 virtualenv
@@ -97,4 +101,56 @@ https://devcenter.heroku.com/articles/heroku-cli<br>
 存檔
 ![image](https://github.com/maydayXi/herokuEnv/blob/master/gitignore.PNG)
 
+修改<wsgi.py>檔
+進入專案子資料夾
+    
+    cd GPMS
+    
+修改
+
+    import os
+    
+    from django.core.wsgi import get_wsgi_application
+    from dj_static import Cling
+    
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "GPMS.settings")
+    application = Cling(get_wsgi_application())
+    
+完成的專案目錄(在 heroku 虛擬環境之下)
+![image](https://github.com/maydayXi/herokuEnv/blob/master/finish.PNG)
+
+## 六、上傳到 Heroku
+> cmd 切換到**專案(GPMS)**根目錄 輸入
+
+    heroku login 
+    
+> 登入 heroku 帳號
+> 接著輸入
+    
+    git init
+
+> 將本機端專案同步到 Heroku Server App
+    
+    heroku git:remote -a appname
+
+> 設定組態
+
+    heroku config:set DJANGO_SETTINGS_MODULE=GPMS.prod_settings
+    
+> 將檔案加入追蹤
+    
+    git add .
+    
+> 更新
+
+    git commit -am "commit title"
+    
+> 上傳
+    
+    git push heroku master
+    
+> 運行網站
+    
+    heroku ps:scale web=1
+    heroku open
     
