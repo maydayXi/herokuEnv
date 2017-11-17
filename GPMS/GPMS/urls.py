@@ -19,8 +19,9 @@ from GPMSWEB import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index),                       # 根目錄
+    url(r'^$', views.index),
     url(r'^data/$', views.data),
     url(r'^wronglist/$', views.wronglist),
     url(r'^wronglist/(\w+)/$', views.wronglist),
+    url(r'^gpms/test/$', views.Main),
 ]
